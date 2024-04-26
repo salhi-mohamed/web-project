@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="../CSS/style4.css">
+    
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>News</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <!--<img src="logo.png" alt="">-->
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Menu</span>
+                    
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="../HTML/page%20principale.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-link">
+                        <a href="../HTML/news.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">News</span>
+                        </a>
+                    </li>
+
+                   
+                    <li class="nav-link">
+                        <a href="../HTML/panier.html">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Panier</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="nav-link">
+                        <a href="../HTML/sign%20in.html">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Sign In</span>
+                        </a>
+                    </li>
+                
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="../HTML/log%20in.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Log In</span>
+                    </a>
+                </li>
+            
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text"><a href="../HTML/page%20principale.html">Tech Guide</a> </div>
+        <div>
+        <table>
+            <tr>
+                <th><img src="../IMAGES/pixel 2.png"  ></th>
+                <th><a href="https://www.theverge.com/2022/12/5/23488942/google-pixel-7-pro-clear-calling-google-one-vpn-december-feature-drop">
+				<h2>Pixel 7 phones are getting a VPN and call enhancements today</h2></a>
+                    <p>Features promised at launch for the Pixel 7 and 7 Pro are officially arriving today with Google’s latest feature drop.</p> </th>
+            </tr>
+            <tr>
+                <th><img src="../IMAGES/apple.png" ></th>
+                <th><a href="https://www.theverge.com/2022/12/5/23494646/apple-podcasts-top-shows-2022-charts-released-true-crime">
+				<h2>Apple Podcasts’ top shows of the year show true crime reigns supreme</h2></a>
+                    <p>Crime Junkie took the top spot, with Morbid joining the top five.</p> </th>
+            </tr>
+            <tr>
+                <th><img src="../IMAGES/riot.png" ></th>
+                <th><a href="https://www.theverge.com/2022/12/5/23494438/riot-games-project-l-league-of-legends-gameplay-developer-update">
+				<h2>Riot shows off some tag team battles in its League of Legends fighting game</h2></a>
+                    <p>Riot shows off Illaoi gameplay and all the slick assist moves coming to Project L.</p> </th>
+            </tr>
+            <tr>
+                <th><img src="../IMAGES/meta.png" ></th>
+                <th><a href="https://www.theverge.com/2022/12/5/23494175/facebook-dating-ai-face-scanning-age-verification-expansion-yoti">
+				<h2>Meta is expanding its use of AI face scanning to verify users’ age on Facebook Dating</h2></a>
+                    <p>Meta has used AI face scanning tools to verify the age of Instagram users. Now, the company says it will test the tool on Facebook Dating users.</p> </th>
+            </tr>
+            <tr>
+                <th><img src="../IMAGES/hbo.png" ></th>
+                <th><a href="https://www.theverge.com/2022/12/5/23494335/max-warner-bros-discovery-hbo-streaming-app-name">
+				<h2>The combined HBO and Discovery app will reportedly just be called ‘Max’</h2></a>
+                    <p>Ditching the HBO naming could make the service seem less prestigious, but Warner Bros. Discovery clearly wants to put all of its content on equal footing.</p> </th>
+            </tr>
+            
+        </table>
+        </div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+
+
+    </script>
+
+</body>
+</html>

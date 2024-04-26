@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Page de commande</title>
+  </head>
+  <body>
+    <form>
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" name="nom"><br><br>
+      <label for="prenom">Prénom:</label>
+      <input type="text" id="prenom" name="prenom"><br><br>
+      <label for="tel">Numéro de téléphone:</label>
+      <input type="tel" id="tel" name="tel"><br><br>
+      <label for="adresse">Adresse:</label>
+      <input type="text" id="adresse" name="adresse"><br><br>
+      <button type="button" onclick="imprimerFacture()">Imprimer facture</button>
+    </form>
+    <script>
+      function imprimerFacture() {
+        // Récupérer les valeurs des champs d'entrée
+        var nom = document.getElementById("nom").value;
+        var prenom = document.getElementById("prenom").value;
+        var tel = document.getElementById("tel").value;
+        var adresse = document.getElementById("adresse").value;
+
+        // Rediriger vers la page de facture en passant les valeurs en tant que paramètres dans l'URL
+        window.location.href = "facture.html?nom=" + nom + "&prenom=" + prenom + "&tel=" + tel + "&adresse=" + adresse;
+      }
+    </script>
+  </body>
+</html>
