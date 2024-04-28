@@ -2,7 +2,28 @@
 <html>
   <head>
     <title> Facture</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\LENOVO\Desktop\proj web\web\CSS\test.css">
+    <link rel="stylesheet" href="C:\Users\LENOVO\Desktop\proj web\web\CSS\test.css">
+    <style>
+      /* Styles spécifiques au footer */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      footer p {
+        margin: 0;
+      }
+
+      /* Styles spécifiques au bouton */
+      #imprimer-facture {
+        display: block;
+        margin: 20px auto; /* Pour centrer horizontalement */
+      }
+    </style>
   </head>
   <body>
     <h1>Page de facturation</h1>
@@ -16,19 +37,23 @@
       <label for="adresse">Adresse:</label>
       <input type="text" id="adresse" name="adresse"><br><br>
     </form>
-    <button onclick="imprimerFacture()">Imprimer facture</button>
+    <button id="imprimer-facture" onclick="imprimerFacture()">Imprimer facture</button>
 
-    <script >
-        function imprimerFacture() {
-  var nom = document.getElementById("nom").value;
-  var prenom = document.getElementById("prenom").value;
-  var tel = document.getElementById("tel").value;
-  var adresse = document.getElementById("adresse").value;
+    <script>
+      function imprimerFacture() {
+        var nom = document.getElementById("nom").value;
+        var prenom = document.getElementById("prenom").value;
+        var tel = document.getElementById("tel").value;
+        var adresse = document.getElementById("adresse").value;
 
-  // Vous pouvez remplacer les alertes suivantes par un appel à une nouvelle page HTML
-  window.location.href = "facture.html?nom=" + nom + "&prenom=" + prenom + "&tel=" + tel + "&adresse=" + adresse + "&panier=" + panier;
-
-}
+        // Vous pouvez remplacer les alertes suivantes par un appel à une nouvelle page HTML
+        window.location.href = "facture.html?nom=" + nom + "&prenom=" + prenom + "&tel=" + tel + "&adresse=" + adresse + "&panier=" + panier;
+      }
     </script>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 VotreNom. Tous droits réservés. | Contactez-nous : contact@example.com | Suivez-nous sur <a href="#">Facebook</a> et <a href="#">Twitter</a></p>
+    </footer>
   </body>
 </html>
