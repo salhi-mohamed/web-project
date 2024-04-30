@@ -1,59 +1,187 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title> Facture</title>
-    <link rel="stylesheet" href="C:\Users\LENOVO\Desktop\proj web\web\CSS\test.css">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
     <style>
-      /* Styles spécifiques au footer */
-      footer {
-        background-color: #333;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-      footer p {
-        margin: 0;
-      }
+        /* Styles généraux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f0ff; /* Violet très clair */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-      /* Styles spécifiques au bouton */
-      #imprimer-facture {
-        display: block;
-        margin: 20px auto; /* Pour centrer horizontalement */
-      }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1; /* Pour que le contenu prenne toute la hauteur restante */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .invoice-details {
+            margin-bottom: 20px;
+        }
+
+        .invoice-details label {
+            font-weight: bold;
+            display: block;
+        }
+
+        .invoice-details p {
+            margin: 5px 0;
+        }
+
+        /* Styles pour le footer */
+        footer {
+            background-color: #515151; /* Couleur de fond */
+            color: #fff; /* Couleur du texte */
+            padding: 20px; /* Espacement intérieur */
+        }
+
+        .contact {
+            padding: 20px 0; /* Espacement intérieur du contenu de contact */
+        }
+
+        .main-contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .contact-content {
+            flex-basis: 30%; /* Largeur des éléments de contenu de contact */
+        }
+
+        .contact-content li {
+            margin-bottom: 10px;
+        }
+
+        .contact-content li a {
+            color: #fff; /* Couleur du texte des liens */
+            text-decoration: none; /* Supprimer le soulignement des liens */
+            font-weight: bold;
+        }
+
+        .contact-content li a:hover {
+            color: #f5f0ff; /* Couleur du texte au survol */
+        }
+
+        .action {
+            text-align: center; /* Centrer le formulaire */
+            margin-top: 20px; /* Espacement entre le contenu de contact et le formulaire */
+        }
+
+        .action form input[type="email"] {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .action form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #f5f0ff; /* Couleur de fond du bouton */
+            color: #515151; /* Couleur du texte du bouton */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Animation de transition */
+        }
+
+        .action form input[type="submit"]:hover {
+            background-color: #757575; /* Couleur de fond du bouton au survol */
+        }
+
+        .last {
+            text-align: center;
+            background-color: #757575; /* Couleur de fond */
+            color: #fff; /* Couleur du texte */
+            padding: 20px; /* Espacement intérieur */
+            margin-top: 20px; /* Espacement supérieur */
+            border-radius: 8px; /* Coins arrondis */
+        }
+
+        /* Style pour le bouton d'impression */
+        .print-button {
+            background-color: #4caf50; /* Couleur de fond */
+            color: white; /* Couleur du texte */
+            padding: 10px 20px; /* Espacement intérieur */
+            border: none; /* Supprimer la bordure */
+            border-radius: 5px; /* Coins arrondis */
+            cursor: pointer; /* Curseur pointer au survol */
+            font-size: 16px; /* Taille de police */
+            margin-top: 20px; /* Espacement supérieur */
+        }
+
+        .print-button:hover {
+            background-color: #45a049; /* Couleur de fond au survol */
+        }
     </style>
-  </head>
-  <body>
-    <h1>Page de facturation</h1>
-    <form>
-      <label for="nom">Nom:</label>
-      <input type="text" id="nom" name="nom"><br><br>
-      <label for="prenom">Prénom:</label>
-      <input type="text" id="prenom" name="prenom"><br><br>
-      <label for="tel">Numéro de téléphone:</label>
-      <input type="tel" id="tel" name="tel"><br><br>
-      <label for="adresse">Adresse:</label>
-      <input type="text" id="adresse" name="adresse"><br><br>
-    </form>
-    <button id="imprimer-facture" onclick="imprimerFacture()">Imprimer facture</button>
-
-    <script>
-      function imprimerFacture() {
-        var nom = document.getElementById("nom").value;
-        var prenom = document.getElementById("prenom").value;
-        var tel = document.getElementById("tel").value;
-        var adresse = document.getElementById("adresse").value;
-
-        // Vous pouvez remplacer les alertes suivantes par un appel à une nouvelle page HTML
-        window.location.href = "facture.html?nom=" + nom + "&prenom=" + prenom + "&tel=" + tel + "&adresse=" + adresse + "&panier=" + panier;
-      }
-    </script>
-
-    <!-- Footer -->
+</head>
+<body>
+    <div class="container">
+        <h1>Facture d'achat</h1>
+        <div class="invoice-details">
+            <label>Nom:</label>
+            <p>John Doe</p>
+            <label>Prénom:</label>
+            <p>John</p>
+            <label>Numéro de téléphone:</label>
+            <p>0123456789</p>
+            <label>Adresse:</label>
+            <p>123 Rue de l'Exemple</p>
+            <label>Article acheté:</label>
+            <p>iPhone 14 Pro Max</p>
+            <label>Prix:</label>
+            <p>1 399,00 €</p>
+        </div>
+        <!-- Bouton d'impression -->
+        <button class="print-button" onclick="window.print()">Imprimer</button>
+    </div>
     <footer>
-      <p>&copy; 2024 VotreNom. Tous droits réservés. | Contactez-nous : contact@example.com | Suivez-nous sur <a href="#">Facebook</a> et <a href="#">Twitter</a></p>
+        <section class="contact" id="contact">
+            <div class="main-contact">
+                <div class="contact-content">
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </div>
+                <div class="contact-content">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Tel: +216 0000000 <BR>Or: +216 25 767 728</a></li>
+                </div>
+                <div class="contact-content">
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                </div>
+            </div>
+            <div class="action">
+                <form>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="submit" name="submit" value="Submit" required>
+                </form>
+            </div>
+        </section>
+        <div class="last">
+            <p>Realisé par : Salhi Mohamed Houssem & Chouchene Aya <br> @2023/2024</p>
+        </div>
     </footer>
-  </body>
+</body>
 </html>

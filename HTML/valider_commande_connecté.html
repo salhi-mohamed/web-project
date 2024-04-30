@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\LENOVO\Desktop\proj web\web\Valider_commande_connecté.css">
+
+    <title>Validation d'Achat</title>
+
+
+</head>
+<body>
+    <h1>Validation d'Achat</h1>
+    <form action="/process_purchase" method="POST">
+        <label for="article">Article:</label><br>
+        <input type="text" id="article" name="article" value="Nom de l'article" readonly><br><br>
+        <label for="quantity">Quantité:</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+        <label for="shipping_address">Adresse de Livraison:</label><br>
+        <textarea id="shipping_address" name="shipping_address" rows="4" cols="50" required></textarea><br><br>
+        <label for="payment_method">Méthode de Paiement:</label><br>
+        <select id="payment_method" name="payment_method" required>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="paypal">PayPal</option>
+        </select><br><br>
+        <input type="submit" value="Voir facture">
+    </form>
+    <button class="back-button" onclick="window.history.back()">Retour</button>
+</body>
+</html>

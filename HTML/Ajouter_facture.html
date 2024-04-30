@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gestion des articles</title>
+    <style>
+        /* Style de base pour le corps de la page */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Style pour l'en-tête de la page */
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+/* Style pour le titre principal de la page */
+h1 {
+	margin: 0;
+}
+
+/* Style pour les sections de la page */
+section {
+	margin: 20px 0;
+	padding: 20px;
+	border: 1px solid #ccc;
+}
+
+/* Style pour les formulaires de la page */
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Style pour les étiquettes des formulaires */
+label {
+	margin-bottom: 10px;
+}
+
+/* Style pour les champs de saisie des formulaires */
+input[type="text"],
+input[type="number"],
+textarea {
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+/* Style pour les boutons de formulaire */
+button[type="submit"] {
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+/* Style pour les tableaux de la page */
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+/* Style pour l'en-tête des tableaux */
+th {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+}
+
+/* Style pour les cellules des tableaux */
+td {
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+/* Style pour les liens dans les tableaux */
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+/* Style pour le pied de page de la page */
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+    </style>
+</head>
+<body>
+	<header>
+		<h1>Gestion des facture</h1>
+	</header>
+	<main>
+		<section>
+			<h2>Ajouter une facture</h2>
+			<form>
+				<label for="nom">Nom de la facture:</label>
+				<input type="text" id="nom" name="nom" required><br>
+
+				<label for="description">Description:</label>
+				<textarea id="description" name="description"></textarea><br>
+
+				<label for="prix">Prix:</label>
+				<input type="number" id="prix" name="prix" required><br>
+
+				<button type="submit">Ajouter</button>
+			</form>
+		</section>
+		<section>
+			<h2>Liste des factures</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Nom</th>
+						<th>Description</th>
+						<th>total</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>facture 1 :</td>
+						<td>Description de la facture 1 : </td>
+						<td>10.00€</td>
+						<td>
+							<a href="#">Modifier</a> |
+							<a href="#">Supprimer</a> |
+							<a href="#">Lire</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Article 2</td>
+						<td>Description de la facture 2</td>
+						<td>15.00€</td>
+						<td>
+							<a href="#">Modifier</a> |
+							<a href="#">Supprimer</a> |
+							<a href="#">Lire</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>Modifier un article</h2>
+			<form>
+				<label for="nom">Nom de la facture:</label>
+				<input type="text" id="nom" name="nom" required><br>
+
+				<label for="description">Description:</label>
+				<textarea id="description" name="description"></textarea><br>
+
+				<label for="prix">Prix:</label>
+				<input type="number" id="prix" name="prix" required><br>
+
+				<button type="submit">Modifier</button>
+			</form>
+		</section>
+		<section>
+			<h2>Lire une facture</h2>
+			<p>Nom de l'article: Article 1</p>
+			<p>Description: Description de l'article 1</p>
+			<p>total: 10.00€</p>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 - Tous droits réservés</p>
+	</footer>
+</body>
+</html>
