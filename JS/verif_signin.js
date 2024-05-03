@@ -11,6 +11,7 @@ function verif() {
     if (document.creation.Tel.value.length != 8) {
         alert("vous devez respecter la taille d'un numero de telephone (8 chiffres)");
     }
+    
 }
 const body = document.querySelector('body'),
 sidebar = body.querySelector('nav'),
